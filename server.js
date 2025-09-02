@@ -14,6 +14,7 @@ const __filename = fileURLToPath(import.meta.url);
 
 // Middleware
 app.use(express.json({ limit: '10mb' }));
+console.log(process.env)
 app.use(cors({
   origin: process.env.CLIENT_ORIGIN || 'http://localhost:5173',
   credentials: true
